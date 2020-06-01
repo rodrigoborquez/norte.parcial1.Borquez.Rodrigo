@@ -8,12 +8,14 @@
 </head>
 <body>
     <div id="container">
-
+        
 
         <!-- Cabecera -->
         <div class="grid-container">
+            
             <div class="header">
-                <h2>Hay vida en otros planetas? - Sistemas Solares #445 </h2>
+                <img class="imagenLogo" src="/content/img/uai-vertical.png" alt="Logo" />
+                <h2>¿Hay vida en otros planetas? - Sistemas Solares #445 </h2>
             </div>
 
             <div class="izquierda"></div>
@@ -22,7 +24,8 @@
                 <!-- Contenido -->
                 <section>
                     <article>
-                        <img class="logo" src="/content/img/explosion.jpg" alt="Logo de la Institución" />
+                        <img class="imagen" src="/content/img/explosion.jpg" alt="FotoExpansion" />
+                        <figcaption> Figura: expansión del Hubble </figcaption>
                         @RenderBody()
                     </article>
                 </section>
@@ -34,7 +37,7 @@
                 <aside id="pub">
                     <article>
                         <div>
-                            <h3>Contenido relacionado</h3>
+                            <h3 class="contenidoRelacionado">Contenido relacionado</h3>
                             <div>
                                 <ul>
 
@@ -50,7 +53,8 @@
 
             <!-- Pie de pagina -->
             <div class="footer">
-                <p>&copy; @DateTime.Now.Year - Rodrigo Bórquez | Parcial 1</p>
+
+                <p class="textoFooter">¿Hay vida en otros planetas? - &copy; @DateTime.Now.Year - Rodrigo Bórquez | Parcial 1</p>
             </div>
         </div>
 

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - UAI</title>
+    <link href="~/Content/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="container">
+
+
+        <!-- Cabecera -->
+        <div class="grid-container">
+            <div class="header">
+                <h2>Hay vida en otros planetas? - Sistemas Solares #445 </h2>
+            </div>
+
+            <div class="izquierda"></div>
+            <div class="centro" style="background-color:#ccc;">
+
+                <!-- Contenido -->
+                <section>
+                    <article>
+                        <img class="logo" src="/content/img/explosion.jpg" alt="Logo de la Institución" />
+                        @RenderBody()
+                    </article>
+                </section>
+
+            </div>
+            <div class="derecha" style="background-color:white;">
+
+                <!-- Contenido relacionado-->
+                <aside id="pub">
+                    <article>
+                        <div>
+                            <h3>Contenido relacionado</h3>
+                            <div>
+                                <ul>
+
+                                    <li><a href="/Home/Cosmo">Constelaciones</a> </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </aside>
+
+            </div>
+
+            <!-- Pie de pagina -->
+            <div class="footer">
+                <p>&copy; @DateTime.Now.Year - Rodrigo Bórquez | Parcial 1</p>
+            </div>
+        </div>
+
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

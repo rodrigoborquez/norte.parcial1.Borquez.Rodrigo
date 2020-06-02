@@ -17,26 +17,38 @@
 </p>
 
 
-
 <form id="agregarCons">
     <fieldset>
-
         <legend>Agregar Constelacion </legend>
-        <label for="nombreC">Nombre</label>
-        <input type="text" id="nombreC" name="nombreC" />
-       
-        <label for="sigloC">Siglo</label>
-        <input type="text" id="sigloC" name="sigloC" />
+        <label for="nombre">Nombre:</label>
+        <input id="nombre">
 
-        <button>Agregar</button>
-
+        <label for="siglo">Siglo:</label>
+        <input id="siglo">
+        <button onclick="myFunction()">Agregar Constelacion OBJ</button>
     </fieldset>
 </form>
 
-<ol id="lista"></ol>
+
+<ol id="listConstelaciones"></ol>
 
 <script>
-    var list = document.getElementById('lista');
+    function myFunction() {
+        function constelaciones(nombre, siglo) {
+            this.name = nombre;
+            this.siglos = siglo;
+        }
+
+        var x = document.createElement("LI");
+        var nombreC = document.getElementById("nombre").value
+        var sigloC = document.getElementById("siglo").value
+        var constelacion = new constelaciones(nombreC, sigloC);
+        var t = document.createTextNode(constelacion.name + " - " + constelacion.siglos);
+        x.appendChild(t);
+        document.getElementById("listConstelaciones").appendChild(x);
+    }
+
+    var list = document.getElementById('NombreSiglo');
     var entry = document.getElementById('agregarCons');
 
     entry.onsubmit = function (evt) {
